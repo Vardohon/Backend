@@ -4,13 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>Document</title>
 </head>
 
 <body>
+
+    <!-- <form action="monscript.php" method="post" enctype="multipart/form-data">
+        <label>Votre nom :</label>
+        <input name="nom" id="nom" type="text" />
+
+        <label>Votre âge :</label>
+        <input name="age" id="age" type="number" /></p>
+
+        <button type="submit">Valider</button>
+        <input type="file" name="fichier">
+    </form> -->
+
+    <form action="monscript.php" method="POST" enctype="multipart/form-data">
+
+    <button type="submit">Valider</button>
+        <input type="file" name="fichier">
+    </form>
+
+
+
     <?php
 
-    echo "<h1>Bonjour le monde</h1>";
+
+    // echo "<h1>Bonjour le monde</h1>";
 
     // echo $_SERVER["SCRIPT_NAME"];
     // var_dump($_SERVER);
@@ -56,22 +79,22 @@
     // $tab = array(); //ou $tab = []
 
 
-    $a = array(
-        "19001" => array(
-            "Centre", "Centre", "Centre", "Centre", "Centre", "Centre", "", "", "Centre", "Centre",
-            "Stage", "Stage", "Stage", "Stage", "Stage", "Stage", "Stage", "Stage", "Stage", "Stage", "Stage", "Stage", "Validation", "Validation"
-        ),
+    // $a = array(
+    //     "19001" => array(
+    //         "Centre", "Centre", "Centre", "Centre", "Centre", "Centre", "", "", "Centre", "Centre",
+    //         "Stage", "Stage", "Stage", "Stage", "Stage", "Stage", "Stage", "Stage", "Stage", "Stage", "Stage", "Stage", "Validation", "Validation"
+    //     ),
 
-        "19002" => array(
-            "Centre", "Centre", "Centre", "Centre", "Centre", "Centre", "Centre", "Centre", "Centre", "Centre", "Centre", "Centre",
-            "Stage", "Stage", "Stage", "Stage", "Stage", "Stage", "Stage", "Stage", "Stage", "Stage", "Stage", "Stage", "Validation", ""
-        ),
+    //     "19002" => array(
+    //         "Centre", "Centre", "Centre", "Centre", "Centre", "Centre", "Centre", "Centre", "Centre", "Centre", "Centre", "Centre",
+    //         "Stage", "Stage", "Stage", "Stage", "Stage", "Stage", "Stage", "Stage", "Stage", "Stage", "Stage", "Stage", "Validation", ""
+    //     ),
 
-        "19003" => array(
-            "", "", "Centre", "Centre", "Centre", "Centre", "Centre", "Centre", "Centre", "Centre", "Centre", "Stage", "Stage", "Stage",
-            "Stage", "Stage", "Stage", "Stage", "Stage", "Stage", "Stage", "Stage", "Stage", "", "", "Validation"
-        )
-    );
+    //     "19003" => array(
+    //         "", "", "Centre", "Centre", "Centre", "Centre", "Centre", "Centre", "Centre", "Centre", "Centre", "Stage", "Stage", "Stage",
+    //         "Stage", "Stage", "Stage", "Stage", "Stage", "Stage", "Stage", "Stage", "Stage", "", "", "Validation"
+    //     )
+    // );
 
     // var_dump($a);
 
@@ -89,59 +112,110 @@
 
 
 
-// function calculator($FirstNumber,$SecondNumber,$operator){
-//     switch ($operator) {
-//         case "Somme":
-//             $CalculatorResult = $FirstNumber + $SecondNumber;
-//             echo $CalculatorResult;
-//             break;
-//         case "Soustraction":
-//             $CalculatorResult = $FirstNumber - $SecondNumber;
-//             echo $CalculatorResult;
-//             break;
-//         case "Multiplication":
-//             $CalculatorResult = $FirstNumber * $SecondNumber;
-//             echo $CalculatorResult;
-//             break;
-//         case "Division":
-//             if($SecondNumber!=0){
-//             $CalculatorResult = $FirstNumber / $SecondNumber;
-//             echo $CalculatorResult;}
-//             else{echo "Pas divisible par 0";};
-//             break;
-//         default:
-//         echo "Erreur";
-//     }};
-//     calculator(8,12,"Somme");
+    // function calculator($FirstNumber,$SecondNumber,$operator){
+    //     switch ($operator) {
+    //         case "Somme":
+    //             $CalculatorResult = $FirstNumber + $SecondNumber;
+    //             echo $CalculatorResult;
+    //             break;
+    //         case "Soustraction":
+    //             $CalculatorResult = $FirstNumber - $SecondNumber;
+    //             echo $CalculatorResult;
+    //             break;
+    //         case "Multiplication":
+    //             $CalculatorResult = $FirstNumber * $SecondNumber;
+    //             echo $CalculatorResult;
+    //             break;
+    //         case "Division":
+    //             if($SecondNumber!=0){
+    //             $CalculatorResult = $FirstNumber / $SecondNumber;
+    //             echo $CalculatorResult;}
+    //             else{echo "Pas divisible par 0";};
+    //             break;
+    //         default:
+    //         echo "Erreur";
+    //     }};
+    //     calculator(8,12,"Somme");
 
-// $date =strtotime("2019-07-14");
-// echo date("W", $date); 
+    // $date =strtotime("2019-07-14");
+    // echo date("W", $date); 
 
-// $origin = new DateTime();
-// $target = date_create('2024-08-09');
-// $interval = date_diff($origin, $target);
-// echo $interval->format('%R%a days');
+    // $origin = new DateTime();
+    // $target = date_create('2024-08-09');
+    // $interval = date_diff($origin, $target);
+    // echo $interval->format('%R%a days');
 
-// $annee = 2024; // Remplacez ceci par l'année que vous souhaitez vérifier
-// if (date('L', strtotime("$annee-01-01"))) {
-//     echo "L'année $annee est bissextile."; } 
-//     else { echo "L'année $annee n'est pas bissextile."; }
+    // $annee = 2024; // Remplacez ceci par l'année que vous souhaitez vérifier
+    // if (date('L', strtotime("$annee-01-01"))) {
+    //     echo "L'année $annee est bissextile."; } 
+    //     else { echo "L'année $annee n'est pas bissextile."; }
 
-// $oDate = DateTime::createFromFormat("d/m/Y", "32/17/2019"); 
-// $errors = DateTime::getLastErrors(); 
-// if ($errors["error_count"]>0 || $errors["warning_count"]>0) { echo "ARGHHHH !"; }
+    // $oDate = DateTime::createFromFormat("d/m/Y", "32/17/2019"); 
+    // $errors = DateTime::getLastErrors(); 
+    // if ($errors["error_count"]>0 || $errors["warning_count"]>0) { echo "ARGHHHH !"; }
 
-// echo date("H:i");
+    // echo date("H:i");
 
-// $date= new DateTime();
-// $date->modify('+1 month');
-// echo $date->format('Y-m-d');
+    // $date= new DateTime();
+    // $date->modify('+1 month');
+    // echo $date->format('Y-m-d');
 
-$timestamp=1000200000;
-echo gmdate("Y-m-d\TH:i:s\Z", $timestamp);
+    // $timestamp=1000200000;
+    // echo gmdate("Y-m-d\TH:i:s\Z", $timestamp);
+
+    // print_r(file("customers.csv"))
+
+
+    // Chemin vers le fichier CSV
+// $chemin_fichier_csv = 'customers.csv';
+
+// // Lire le fichier CSV dans un tableau
+// $donnees = file($chemin_fichier_csv);
+
+// // Vérifier si le fichier est lu avec succès
+// if ($donnees !== false) {
+//     // Parcourir chaque ligne du fichier
+//     foreach ($donnees as $ligne) {
+//         // Diviser la ligne en utilisant la virgule comme séparateur
+//         $colonnes = explode(',', $ligne);
+
+//         // Afficher chaque colonne
+//         print_r($colonnes);
+//     }
+// } else {
+//     // Afficher un message d'erreur si le fichier ne peut pas être lu
+//     echo "Impossible de lire le fichier CSV.";
+// }
+
+// if ($donnees !== false) {
+//     echo '<div class="container"><div class="row"><div class="col">';
+//     echo '<table class="table table-bordered">';
+//     // Parcourir chaque ligne du fichier
+//     foreach ($donnees as $ligne) {
+//         // Diviser la ligne en utilisant la virgule comme séparateur
+//         $colonnes = explode(',', $ligne);
+//         // Début de la ligne du tableau
+//         echo '<tr>';
+//         // Afficher chaque colonne
+//         foreach ($colonnes as $colonne) {
+//             echo '<td>' . $colonne . '</td>';
+//         }
+//         // Fin de la ligne du tableau
+//         echo '</tr>';
+//     }
+//     echo '</table>';
+//     echo '</div></div></div>';
+// } else {
+//     // Afficher un message d'erreur si le fichier ne peut pas être lu
+//     echo "Impossible de lire le fichier CSV.";
+// }
 
     ?>
 
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 
 </html>
